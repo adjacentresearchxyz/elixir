@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elixir-validator
+  labels:
+    app: elixir
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elixir
+  template:
+    metadata:
+      labels:
+        app: elixir
+    spec:
+      containers:
+      - name: elixir-validator
+        image: 10.0.2.80:5000/adjacent/elixir-validator
+
