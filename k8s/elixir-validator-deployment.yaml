@@ -16,5 +16,10 @@ spec:
     spec:
       containers:
       - name: elixir-validator
-        image: 10.0.2.80:5000/adjacent/elixir-validator
+        image: elixirprotocol/validator:testnet-1
+          env:
+            - name: ADDRESS
+              value: ""
+            - name: PRIVATE_KEY
+              value: ""
 
